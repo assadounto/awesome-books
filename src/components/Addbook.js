@@ -1,6 +1,6 @@
 const Addbook = () => (
   <div className="ty">
-    <h2>Ad new book</h2>
+    <h2>Add new book</h2>
     <div className="input">
       <form>
         <input type="text" placeholder="book" />
