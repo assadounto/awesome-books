@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import Books from './components/Book';
+import Books from './components/Books';
 import Categories from './components/Categories';
 
 function App() {
