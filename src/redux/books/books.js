@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit/dist/createSlice';
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = [];
 
@@ -8,15 +8,13 @@ const books = createSlice({
   reducers: {
     ADD_BOOK: (state, action) => {
       const book = {
-        id: 2,
+        id: Date.now(),
         author: action.payload.author,
         booktitle: action.payload.booktitle,
       };
       return [...state, book];
     },
-    REMOVE_BOOK: (state, id) => state.map((book) => ((book.id === action.id)
-      ? { ...todo, completed: !todo.completed }
-      : todo)),
+    REMOVE_BOOK: (state, action) => state.filter((book) => (book.id !== action.payload)),
   },
 });
 export const { ADD_BOOK, REMOVE_BOOK } = books.actions;
