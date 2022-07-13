@@ -1,26 +1,34 @@
 import React from 'react';
-import { useSelector } from 'react-redux/es/hooks/useSelector';
+import { PropTypes } from 'prop-types';
+import { useDispatch } from 'react-redux/es/exports';
+import { REMOVE_BOOK } from '../redux/books/books';
 
 function Book(props) {
-  const books = useSelector((state) => state.books);
-  // Book.propTypes = {
-  //   title: PropTypes.string,
-  //   author: PropTypes.string,
-  // };
-  // Book.defaultProps = {
-  //   title: 'My book',
-  //   author: 'Author Name',
-  // };
-  // const { title, author } = props;
+  const {
+    id, booktitle, author,
+  } = props;
+  const dispatch = useDispatch();
+  Book.propTypes = {
+    id: PropTypes.number,
+    booktitle: PropTypes.string,
+    author: PropTypes.string,
+  };
+  Book.defaultProps = {
+    booktitle: 'My book',
+    author: 'Author Name',
+    id: 0,
+  };
+  const handleRemove = () => {
+    dispatch(REMOVE_BOOK(id));
+  };
   return (
     <div className="t">
-      <ul>
-        {books.map((book) => (
-          <li key={book.id}>
-            {book.author}
-          </li>
-        ))}
-      </ul>
+
+      <div key={id}>
+        <span>{author}</span>
+        <span>{booktitle}</span>
+        <button type="submit" onClick={() => { handleRemove(); }}>remove</button>
+      </div>
 
     </div>
   );
