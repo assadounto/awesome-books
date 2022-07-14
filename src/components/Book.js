@@ -1,7 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux/es/exports';
-import { REMOVE_BOOK } from '../redux/books/books';
+import { removeBook } from '../redux/books/books';
 
 function Book(props) {
   const {
@@ -19,7 +19,7 @@ function Book(props) {
     id: 0,
   };
   const handleRemove = () => {
-    dispatch(REMOVE_BOOK(id));
+    dispatch(removeBook(id));
   };
   return (
     <div className="t">
