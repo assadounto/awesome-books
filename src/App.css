@@ -1,4 +1,231 @@
+*{margin: 0;
+padding: 0;}
 .App-header {
+  height: 3rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: #fff;
+  display: flex;
+}
+.logo{
+  margin: 0.375rem  0.125rem 0;
+  font-family: 'Montserrat';
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.BOOKS {
+  width: 3.688rem;
+  height: 1rem;
+  margin: 1.125rem 1.43rem 0.688rem 2.563rem;
+  font-family: 'Montserrat';
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.CATEGORIES{
+   height: 1rem;
+  margin: 1.125rem  0.688rem 2.563rem;
+  opacity: 0.5;
+  font-family: 'Montserrat';
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+.NavMenu {
+  display: flex;
+}
+
+.cont1 {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+
+.booklistcont{
+  width: 95%;
+  margin: auto;
+}
+
+.tt {
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  margin-bottom: 1rem;
+}
+.ty{
+  width: 95%;
+  margin: auto;
+}
+
+.p-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.Second, .actions, .progress {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
+.actions{
+  margin-top: 2rem;
+}
+.progress{
+  padding: 1.3rem;
+}
+.info1 {
+  font-family: 'RobotoSlab';
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+.margin {
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+}
+.border{
+  border-right: 1px solid #4386bf;
+  margin-right: 1rem;
+  padding-right: 1rem;
+}
+
+button {
+  border: 0;
+  background-color: #fff;
+}
+.title {
+  font-family: 'RobotoSlab';
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.category {
+  opacity: 0.5;
+  font-family: 'Montserrat';
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+.info2{
+  opacity: 0.5;
+  font-family: 'Montserrat';
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212
+}
+
+.chapter {
+  font-family: 'RobotoSlab';
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212
+}
+
+.Rectangle-2 {
+  height: 2.063rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: 0;
+}
+
+.-Percent-Complete {
+  font-family: 'Montserrat';
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+.formtitle{
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: var(--warm-grey);
+}
+
+.book {
+  padding: 10px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: var(--white);
+  width: 40%;
+ margin-right: 1rem;
+ background-color: #fff;
+}
+form {
   display: flex;
   flex-direction: row;
+}
+
+.btn {
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  width:10% ;
+}
+
+.p-info {
+  border-right:  1px solid #e8e8e8;
+}
+.Text-Style-3 {
+  text-decoration: none;
+}
+@media only screen and (max-width: 780px) {
+  .Second , .progress ,.booklistcont{
+    display: block;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  .book {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  .btn {
+    width: 50%;
+  }
 }

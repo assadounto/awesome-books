@@ -9,10 +9,10 @@ function App() {
     <div className="App">
 
       <header className="App-header">
-        <div className="logo">AwesomeBooks </div>
+        <div className="logo">BookStore CMS</div>
         <nav className="NavMenu">
-          <Link to="/" className="Books Link">  Books    </Link>
-          <Link to="/Categories" className="Categories Link"> Categories</Link>
+          <Link to="/" className="BOOKS Text-Style-3">BOOKS</Link>
+          <Link to="/Categories" className="CATEGORIES Text-Style-3">CATEGORIES</Link>
         </nav>
       </header>
       <Routes>
