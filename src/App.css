@@ -253,7 +253,7 @@ form {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 800px) {
   .Second,
   .progress,
   .booklistcont {
