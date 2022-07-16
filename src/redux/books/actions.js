@@ -48,7 +48,8 @@ const books = createSlice({
     },
     REMOVE_BOOK(state, action) {
       const newstate = state.items.filter((book) => book.item_id !== action.payload);
-      state.items = newstate;
+      const thestate = state;
+      thestate.items = newstate;
     },
   },
   extraReducers: {
@@ -57,11 +58,12 @@ const books = createSlice({
         ...action.payload[key][0],
         item_id: key,
       }));
-      state.isLoading = false;
-      state.items = books;
+      const thestate = state;
+      thestate.isLoading = false;
+      thestate.items = books;
     },
-    [fetchBooks.pending]: (state) => { state.isLoading = true; },
-    [fetchBooks.rejected]: (state) => { state.isFaild = true; },
+    [fetchBooks.pending]: (state) => { const thestate = state; thestate.isLoading = true; },
+    [fetchBooks.rejected]: (state) => { const thestate = state; thestate.isFaild = true; },
   },
 });
 

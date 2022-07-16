@@ -16,7 +16,7 @@ const Books = () => {
       <div className="booklistcont">
         {
         books.isFaild
-          ? <div>Faild</div>
+          ? <div>Loading Faild</div>
           : (
             <>
               {

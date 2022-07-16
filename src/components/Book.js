@@ -11,14 +11,15 @@ function Book(props) {
   } = props;
   const dispatch = useDispatch();
   Book.propTypes = {
-    id: PropTypes.number,
+    id: PropTypes.string.isRequired,
     title: PropTypes.string,
     author: PropTypes.string,
+    category: PropTypes.string,
   };
   Book.defaultProps = {
     title: 'My book',
     author: 'Author Name',
-    id: 0,
+    category: 'Fiction',
   };
   const handleRemove = () => {
     dispatch(removeBookById(id)).then(() => dispatch(REMOVE_BOOK(id)));
@@ -32,9 +33,9 @@ function Book(props) {
             <div className="title">{title}</div>
             <div className="info1 margin">{author}</div>
             <div className="actions">
-              <div className="info1 border">Comment</div>
-              <button className="info1 border remove" type="submit" onClick={() => { handleRemove(); }}>Remove</button>
-              <div className="info1">Edit</div>
+              <div className="info1 border mouse">Comment</div>
+              <button className="info1 border remove mouse" type="submit" onClick={() => { handleRemove(); }}>Remove</button>
+              <div className="info1 mouse">Edit</div>
             </div>
           </div>
           <div className="progress">
@@ -46,8 +47,8 @@ function Book(props) {
           </div>
           <div className="current">
             <div className="info2">CURRENT CHAPTER</div>
-            <div className="chapter chapter">Chapter 17</div>
-            <button className="Rectangle-2" type="submit">UPDATE PROGRESS</button>
+            <div className="chapter">Chapter 17</div>
+            <button className="Rectangle-2 mouse" type="submit">UPDATE PROGRESS</button>
           </div>
         </div>
       </div>

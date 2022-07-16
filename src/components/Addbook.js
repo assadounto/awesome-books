@@ -21,12 +21,12 @@ const Addbook = () => {
   };
   return (
     <div className="ty">
-      <div className="formtitle">Add new book</div>
+      <div className="booktitle">ADD NEW BOOK</div>
       <div className="input">
         <form onSubmit={addBookHandler}>
           <input type="text" className="book" placeholder="book" value={bookinfo.author} onChange={(e) => setbookInfo({ author: e.target.value, item_id: Date.now(), category: 'fiction' })} />
           <input type="text" className="book" placeholder="author" value={bookinfo2.title} onChange={(e) => setbookInfo2({ title: e.target.value })} />
-          <button type="submit" className="btn">Add book</button>
+          <button type="submit" className="btn mouse">Add book</button>
         </form>
       </div>
     </div>
